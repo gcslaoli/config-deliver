@@ -1,0 +1,7 @@
+version: "3"
+services:
+  config-deliver-client:
+    image: gcslaoli/config-deliver-client:latest
+    restart: always
+    volumes:
+      - ./config.yaml:/app/config.yaml
