@@ -1,0 +1,5 @@
+server:
+  address: ":8000"
+
+dirmap:
+  238FDEDC-20DC-B06E-1D32-AD511C637A23: ./data
