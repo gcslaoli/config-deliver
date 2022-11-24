@@ -23,16 +23,16 @@ minor=$(echo $version | cut -d. -f2)
 patch=$(echo $version | cut -d. -f3)
 
 # Check if version is already released
-if git tag | grep -q "config-deliver-server/v$version"; then
-    echo "Version config-deliver-server/v$version is already released"
+if git tag | grep -q "config-deliver-client/v$version"; then
+    echo "Version config-deliver-client/v$version is already released"
     exit 1
 fi
 
 # Create tag
-git tag -a "config-deliver-server/v$version" -m "config-deliver-server/v$version"
+git tag -a "config-deliver-client/v$version" -m "config-deliver-client/v$version"
 
 # Push tag
-git push origin "config-deliver-server/v$version"
+git push origin "config-deliver-client/v$version"
 
 
 
@@ -41,10 +41,10 @@ git push origin "config-deliver-server/v$version"
 docker login
 
 # 编译并发布镜像
-cd config-deliver-server
+cd config-deliver-client
 docker buildx build --platform linux/amd64,linux/arm64 \
-    -t gcslaoli/config-deliver-server:latest \
-    -t gcslaoli/config-deliver-server:$major \
-    -t gcslaoli/config-deliver-server:$major.$minor \
-    -t gcslaoli/config-deliver-server:$major.$minor.$patch \
+    -t gcslaoli/config-deliver-client:latest \
+    -t gcslaoli/config-deliver-client:$major \
+    -t gcslaoli/config-deliver-client:$major.$minor \
+    -t gcslaoli/config-deliver-client:$major.$minor.$patch \
     --push .
