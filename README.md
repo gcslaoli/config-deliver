@@ -1,5 +1,7 @@
 # config-deliver
 
+[Github](https://github.com/gcslaoli/config-deliver)
+
 ## 项目介绍
 
 工作中经常会遇到需要将配置文件分发到各个服务器的情况，这个项目就是为了解决这个问题而诞生的。目前本项目在作者的工作中主要用于分发域名证书、以及为 traefik 提供 http provider 的配置文件。
