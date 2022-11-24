@@ -1,6 +1,6 @@
 go 1.19
 
 use (
-	./client
-	./server
+	./config-deliver-client
+	./config-deliver-server
 )
