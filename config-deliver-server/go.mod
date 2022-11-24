@@ -1,4 +1,4 @@
-module github.com/gcslaoli/config-deliver/server
+module github.com/gcslaoli/config-deliver/config-deliver-server
 
 go 1.19
 
